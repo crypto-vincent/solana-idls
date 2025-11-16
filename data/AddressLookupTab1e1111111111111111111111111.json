@@ -29,8 +29,16 @@
   },
   "accounts": {
     "AddressLookupTable": {
-      "discriminator": [],
-      "fields": []
+      "discriminator": [1, 0, 0, 0],
+      "fields": [
+        { "name": "deactivation_slot", "type": "u64" },
+        { "name": "last_extended_slot", "type": "u64" },
+        { "name": "last_extended_index", "type": "u8" },
+        { "name": "editable", "type": "bool" },
+        { "name": "authority", "type": "pubkey" },
+        { "name": "padding", "type": "u16" },
+        { "name": "addresses", "loop": { "items": "pubkey", "stop": "end" } }
+      ]
     }
   },
   "types": {},
