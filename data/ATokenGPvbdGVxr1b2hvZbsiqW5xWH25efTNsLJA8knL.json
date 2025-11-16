@@ -1,7 +1,7 @@
 {
   "name": "spl_associated_token",
   "instructions": {
-    "Create": {
+    "create": {
       "discriminator": [],
       "args": [],
       "accounts": [
@@ -12,7 +12,7 @@
             "seeds": [
               {
                 "kind": "account",
-                "path": "wallet"
+                "path": "owner"
               },
               {
                 "kind": "account",
@@ -25,7 +25,7 @@
             ]
           }
         },
-        { "name": "wallet" },
+        { "name": "owner" },
         { "name": "mint" },
         {
           "name": "system_program",

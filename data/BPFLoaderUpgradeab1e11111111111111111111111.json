@@ -1,12 +1,12 @@
 {
   "name": "bpf_loader_upgradeable",
   "instructions": {
-    "InitializeBuffer": {
+    "initialize_buffer": {
       "discriminator": [0, 0, 0, 0],
       "args": [],
       "accounts": [{ "name": "buffer" }, { "name": "buffer_authority" }]
     },
-    "Write": {
+    "write": {
       "discriminator": [1, 0, 0, 0],
       "args": [
         { "name": "offset", "type": "u32" },
@@ -14,7 +14,7 @@
       ],
       "accounts": [{ "name": "buffer" }, { "name": "buffer_authority" }]
     },
-    "DeployWithMaxDataLen": {
+    "deploy_with_max_data_len": {
       "discriminator": [2, 0, 0, 0],
       "args": [{ "name": "max_data_len", "type": "u64" }],
       "accounts": [
@@ -28,7 +28,7 @@
         { "name": "upgrade_authority" }
       ]
     },
-    "Upgrade": {
+    "upgrade": {
       "discriminator": [3, 0, 0, 0],
       "accounts": [
         { "name": "program_data" },
@@ -41,7 +41,7 @@
       ],
       "args": []
     },
-    "SetAuthority": {
+    "set_authority": {
       "discriminator": [4, 0, 0, 0],
       "args": [],
       "accounts": [
@@ -50,17 +50,17 @@
         { "name": "next_authority" }
       ]
     },
-    "Close": {
+    "close": {
       "discriminator": [5, 0, 0, 0],
       "args": [],
       "accounts": [{ "name": "close" }, { "name": "recipient" }]
     },
-    "ExtendProgram": {
+    "extend_program": {
       "discriminator": [6, 0, 0, 0],
       "args": [{ "name": "additional_bytes", "type": "u32" }],
       "accounts": [{ "name": "program_data" }, { "name": "program_id" }]
     },
-    "SetAuthorityChecked": {
+    "set_authority_checked": {
       "discriminator": [7, 0, 0, 0],
       "args": [],
       "accounts": [

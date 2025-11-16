@@ -1,17 +1,17 @@
 {
   "name": "compute_budget",
   "instructions": {
-    "RequestHeapFrame": {
+    "request_heap_frame": {
       "discriminator": [1],
       "args": ["u32"],
       "accounts": []
     },
-    "SetComputeUnitLimit": {
+    "set_compute_unit_limit": {
       "discriminator": [2],
       "args": ["u32"],
       "accounts": []
     },
-    "SetComputeUnitPrice": {
+    "set_compute_unit_price": {
       "discriminator": [3],
       "args": ["u64"],
       "accounts": []

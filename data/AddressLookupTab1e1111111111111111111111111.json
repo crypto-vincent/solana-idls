@@ -1,27 +1,27 @@
 {
   "name": "address_lookup_table",
   "instructions": {
-    "CreateLookupTable": {
+    "create_lookup_table": {
       "discriminator": [0, 0, 0, 0],
       "args": [],
       "accounts": []
     },
-    "FreezeLookupTable": {
+    "freeze_lookup_table": {
       "discriminator": [1, 0, 0, 0],
       "args": [],
       "accounts": []
     },
-    "ExtendLookupTable": {
+    "extend_lookup_table": {
       "discriminator": [2, 0, 0, 0],
       "args": [],
       "accounts": []
     },
-    "DeactivateLookupTable": {
+    "deactivate_lookup_table": {
       "discriminator": [3, 0, 0, 0],
       "args": [],
       "accounts": []
     },
-    "CloseLookupTable": {
+    "close_lookup_table": {
       "discriminator": [4, 0, 0, 0],
       "args": [],
       "accounts": []

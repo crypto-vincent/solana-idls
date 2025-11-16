@@ -1,7 +1,7 @@
 {
   "name": "spl_token",
   "instructions": {
-    "InitializeMint": {
+    "initialize_mint": {
       "discriminator": [0],
       "accounts": [{ "name": "mint", "writable": true }, { "name": "rent" }],
       "args": [
@@ -10,7 +10,7 @@
         { "name": "freeze_authority", "coption": "pubkey" }
       ]
     },
-    "InitializeAccount": {
+    "initialize_account": {
       "discriminator": [1],
       "accounts": [
         { "name": "account", "writable": true },
@@ -20,12 +20,12 @@
       ],
       "args": []
     },
-    "InitializeMultisig": {
+    "initialize_multisig": {
       "discriminator": [2],
       "args": [{ "name": "m", "type": "u8" }],
       "accounts": []
     },
-    "Transfer": {
+    "transfer": {
       "discriminator": [3],
       "args": [{ "name": "amount", "type": "u64" }],
       "accounts": [
@@ -34,7 +34,7 @@
         { "name": "owner", "signer": true }
       ]
     },
-    "Approve": {
+    "approve": {
       "discriminator": [4],
       "args": [{ "name": "amount", "type": "u64" }],
       "accounts": [
@@ -43,12 +43,12 @@
         { "name": "owner", "signer": true }
       ]
     },
-    "Revoke": {
+    "revoke": {
       "discriminator": [5],
       "args": [],
       "accounts": []
     },
-    "SetAuthority": {
+    "set_authority": {
       "discriminator": [6],
       "args": [
         {
@@ -70,7 +70,7 @@
         { "name": "authority", "signer": true }
       ]
     },
-    "MintTo": {
+    "mint_to": {
       "discriminator": [7],
       "args": [{ "name": "amount", "type": "u64" }],
       "accounts": [
@@ -79,7 +79,7 @@
         { "name": "mint_authority", "signer": true }
       ]
     },
-    "Burn": {
+    "burn": {
       "discriminator": [8],
       "args": [{ "name": "amount", "type": "u64" }],
       "accounts": [
@@ -88,7 +88,7 @@
         { "name": "owner", "signer": true }
       ]
     },
-    "Close": {
+    "close": {
       "discriminator": [9],
       "args": [],
       "accounts": [
@@ -97,7 +97,7 @@
         { "name": "owner", "signer": true }
       ]
     },
-    "Freeze": {
+    "freeze": {
       "discriminator": [10],
       "args": [],
       "accounts": [
@@ -106,7 +106,7 @@
         { "name": "freeze_authority", "signer": true }
       ]
     },
-    "Thaw": {
+    "thaw": {
       "discriminator": [11],
       "args": [],
       "accounts": [
@@ -115,7 +115,7 @@
         { "name": "freeze_authority", "signer": true }
       ]
     },
-    "TransferChecked": {
+    "transfer_checked": {
       "discriminator": [12],
       "args": [
         { "name": "amount", "type": "u64" },
@@ -128,7 +128,7 @@
         { "name": "owner", "signer": true }
       ]
     },
-    "ApproveChecked": {
+    "approve_checked": {
       "discriminator": [13],
       "args": [
         { "name": "amount", "type": "u64" },
@@ -141,7 +141,7 @@
         { "name": "owner", "signer": true }
       ]
     },
-    "MintToChecked": {
+    "mint_to_checked": {
       "discriminator": [14],
       "args": [
         { "name": "amount", "type": "u64" },
@@ -153,7 +153,7 @@
         { "name": "mint_authority", "signer": true }
       ]
     },
-    "BurnChecked": {
+    "burn_checked": {
       "discriminator": [15],
       "args": [
         { "name": "amount", "type": "u64" },
@@ -165,27 +165,27 @@
         { "name": "owner", "signer": true }
       ]
     },
-    "InitializeAccount2": {
+    "initialize_account2": {
       "discriminator": [16],
       "args": [],
       "accounts": []
     },
-    "SyncNative": {
+    "sync_native": {
       "discriminator": [17],
       "args": [],
       "accounts": []
     },
-    "InitializeAccount3": {
+    "initialize_account3": {
       "discriminator": [18],
       "args": [],
       "accounts": []
     },
-    "InitializeMultisig2": {
+    "initialize_multisig2": {
       "discriminator": [19],
       "args": [],
       "accounts": []
     },
-    "InitializeMint2": {
+    "initialize_mint2": {
       "discriminator": [20],
       "args": [
         { "name": "decimals", "type": "u8" },
