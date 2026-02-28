@@ -3,7 +3,13 @@
   "instructions": {
     "initialize_mint": {
       "discriminator": [0],
-      "accounts": [{ "name": "mint", "writable": true }, { "name": "rent" }],
+      "accounts": [
+        { "name": "mint", "writable": true },
+        {
+          "name": "rent",
+          "address": "SysvarRent111111111111111111111111111111111"
+        }
+      ],
       "args": [
         { "name": "decimals", "type": "u8" },
         { "name": "mint_authority", "type": "pubkey" },
@@ -16,7 +22,10 @@
         { "name": "account", "writable": true },
         { "name": "mint" },
         { "name": "owner" },
-        { "name": "rent" }
+        {
+          "name": "rent",
+          "address": "SysvarRent111111111111111111111111111111111"
+        }
       ],
       "args": []
     },
@@ -167,8 +176,15 @@
     },
     "initialize_account2": {
       "discriminator": [16],
-      "args": [],
-      "accounts": []
+      "args": [{ "name": "owner", "type": "pubkey" }],
+      "accounts": [
+        { "name": "account", "writable": true },
+        { "name": "mint" },
+        {
+          "name": "rent",
+          "address": "SysvarRent111111111111111111111111111111111"
+        }
+      ]
     },
     "sync_native": {
       "discriminator": [17],
@@ -177,8 +193,8 @@
     },
     "initialize_account3": {
       "discriminator": [18],
-      "args": [],
-      "accounts": []
+      "args": [{ "name": "owner", "type": "pubkey" }],
+      "accounts": [{ "name": "account", "writable": true }, { "name": "mint" }]
     },
     "initialize_multisig2": {
       "discriminator": [19],

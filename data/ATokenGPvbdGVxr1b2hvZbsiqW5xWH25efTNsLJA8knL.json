@@ -10,18 +10,9 @@
           "name": "ata",
           "pda": {
             "seeds": [
-              {
-                "kind": "account",
-                "path": "owner"
-              },
-              {
-                "kind": "account",
-                "path": "token_program"
-              },
-              {
-                "kind": "account",
-                "path": "mint"
-              }
+              { "kind": "account", "path": "owner" },
+              { "kind": "account", "path": "token_program" },
+              { "kind": "account", "path": "mint" }
             ]
           }
         },
@@ -40,5 +31,18 @@
   },
   "accounts": {},
   "types": {},
-  "errors": {}
+  "errors": {},
+  "pdas": {
+    "ata": {
+      "seeds": [
+        { "input": "owner", "type": "pubkey" },
+        {
+          "input": "token_program",
+          "type": "pubkey",
+          "value": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        { "input": "mint", "type": "pubkey" }
+      ]
+    }
+  }
 }
