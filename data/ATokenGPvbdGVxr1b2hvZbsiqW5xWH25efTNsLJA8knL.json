@@ -1,13 +1,42 @@
 {
   "name": "spl_associated_token",
   "instructions": {
+    "create_idempotent": {
+      "discriminator": [1],
+      "args": [],
+      "accounts": [
+        { "name": "payer", "writable": true, "signer": true },
+        {
+          "name": "ata",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              { "kind": "account", "path": "owner" },
+              { "kind": "account", "path": "token_program" },
+              { "kind": "account", "path": "mint" }
+            ]
+          }
+        },
+        { "name": "owner" },
+        { "name": "mint" },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        }
+      ]
+    },
     "create": {
       "discriminator": [],
       "args": [],
       "accounts": [
-        { "name": "payer" },
+        { "name": "payer", "writable": true, "signer": true },
         {
           "name": "ata",
+          "writable": true,
           "pda": {
             "seeds": [
               { "kind": "account", "path": "owner" },
