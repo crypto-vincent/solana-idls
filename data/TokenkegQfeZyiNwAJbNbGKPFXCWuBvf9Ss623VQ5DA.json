@@ -13,7 +13,7 @@
       "args": [
         { "name": "decimals", "type": "u8" },
         { "name": "mint_authority", "type": "pubkey" },
-        { "name": "freeze_authority", "coption": "pubkey" }
+        { "name": "freeze_authority", "option": "pubkey" }
       ]
     },
     "initialize_account": {
@@ -71,7 +71,7 @@
         },
         {
           "name": "new_authority",
-          "coption": "pubkey"
+          "option": "pubkey"
         }
       ],
       "accounts": [
@@ -206,7 +206,7 @@
       "args": [
         { "name": "decimals", "type": "u8" },
         { "name": "mint_authority", "type": "pubkey" },
-        { "name": "freeze_authority", "coption": "pubkey" }
+        { "name": "freeze_authority", "option": "pubkey" }
       ],
       "accounts": []
     }
